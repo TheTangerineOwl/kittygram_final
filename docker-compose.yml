@@ -14,6 +14,8 @@ services:
   backend:
     build: ./backend/
     env_file: .env
+    #entrypoint: ["entrypoint.sh", "db:8000"]
+    #command: ["python", "manage.py", "migrate"]
     volumes:
       - static:/backend_static
       - media:/backend_media
